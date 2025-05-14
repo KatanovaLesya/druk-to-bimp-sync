@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  sync:
+    build: .
+    env_file:
+      - .env
+    entrypoint: ["sh", "-c", "while true; do python main.py; sleep 120; done"]
